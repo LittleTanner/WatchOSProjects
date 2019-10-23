@@ -1,15 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project1NoteDictate_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="BcU-zq-GgB">
+                            <items>
+                                <tableRow identifier="Row" id="ZI0-oZ-RlA" customClass="NoteSelectRow" customModule="Project1NoteDictate_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="ePL-uV-VSi">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="2mx-jH-RpT"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="2mx-jH-RpT" id="JE9-r5-ZaN"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Add New Note" id="AY7-F9-vQR">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addNewNote" destination="AgC-eL-Hgc" id="Wya-Q2-fGS"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="BcU-zq-GgB" id="iLb-sK-xMk"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="34" y="93"/>
         </scene>
     </scenes>
 </document>
