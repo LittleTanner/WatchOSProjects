@@ -12,6 +12,19 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var question: WKInterfaceImage!
+    
+    @IBOutlet weak var answers: WKInterfaceGroup!
+    @IBOutlet weak var rock: WKInterfaceButton!
+    @IBOutlet weak var paper: WKInterfaceButton!
+    @IBOutlet weak var scissors: WKInterfaceButton!
+    
+    @IBOutlet weak var levelCounter: WKInterfaceLabel!
+    @IBOutlet weak var timer: WKInterfaceTimer!
+    
+    // MARK: - Lifecycle Methods
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -27,5 +40,16 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    // MARK: - Actions
 
+    @IBAction func rockTapped() {
+    }
+    
+    @IBAction func paperTapped() {
+    }
+    
+    @IBAction func scissorsTapped() {
+    }
+    
 }

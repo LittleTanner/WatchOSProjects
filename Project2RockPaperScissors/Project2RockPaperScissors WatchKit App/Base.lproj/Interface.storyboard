@@ -1,15 +1,58 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project2RockPaperScissors_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="0.5" height="0.5" alignment="center" id="s23-4y-WTA"/>
+                        <separator alignment="left" id="Ror-Fu-9ed"/>
+                        <group width="1" height="0.33000000000000002" alignment="left" id="Lwy-zS-lcu">
+                            <items>
+                                <button width="0.33000000000000002" height="1" alignment="left" id="7nw-EO-gQw">
+                                    <connections>
+                                        <action selector="rockTapped" destination="AgC-eL-Hgc" id="1US-b6-Qm1"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" id="OA5-xH-iaJ">
+                                    <connections>
+                                        <action selector="paperTapped" destination="AgC-eL-Hgc" id="6DM-Gn-bER"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="1" alignment="left" id="8CF-HD-xjf">
+                                    <connections>
+                                        <action selector="scissorsTapped" destination="AgC-eL-Hgc" id="ord-k3-GtS"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="0.90000000000000002" alignment="center" id="Urx-MS-v3b">
+                            <items>
+                                <label alignment="left" text="1/20" id="5gy-Gh-97O"/>
+                                <timer alignment="right" id="3nS-Cz-gt6">
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="answers" destination="Lwy-zS-lcu" id="Fuc-Na-xXD"/>
+                        <outlet property="levelCounter" destination="5gy-Gh-97O" id="4Ki-kL-wNo"/>
+                        <outlet property="paper" destination="OA5-xH-iaJ" id="n2Y-aY-AHe"/>
+                        <outlet property="question" destination="s23-4y-WTA" id="d3p-16-u7G"/>
+                        <outlet property="rock" destination="7nw-EO-gQw" id="svb-Pc-zGZ"/>
+                        <outlet property="scissors" destination="8CF-HD-xjf" id="z6l-Gx-LaM"/>
+                        <outlet property="timer" destination="3nS-Cz-gt6" id="QEI-ig-JdU"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="34" y="57"/>
         </scene>
     </scenes>
 </document>
