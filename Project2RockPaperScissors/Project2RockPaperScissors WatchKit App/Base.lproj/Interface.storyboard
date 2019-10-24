@@ -11,6 +11,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project2RockPaperScissors_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <label alignment="center" hidden="YES" text="You Win!" id="1ft-id-Dcu">
+                            <fontDescription key="font" type="system" pointSize="28"/>
+                        </label>
                         <imageView width="0.5" height="0.5" alignment="center" id="s23-4y-WTA"/>
                         <separator alignment="left" id="Ror-Fu-9ed"/>
                         <group width="1" height="0.33000000000000002" alignment="left" id="Lwy-zS-lcu">
@@ -46,6 +49,7 @@
                         <outlet property="levelCounter" destination="5gy-Gh-97O" id="4Ki-kL-wNo"/>
                         <outlet property="paper" destination="OA5-xH-iaJ" id="n2Y-aY-AHe"/>
                         <outlet property="question" destination="s23-4y-WTA" id="d3p-16-u7G"/>
+                        <outlet property="result" destination="1ft-id-Dcu" id="fKn-Hl-PJJ"/>
                         <outlet property="rock" destination="7nw-EO-gQw" id="svb-Pc-zGZ"/>
                         <outlet property="scissors" destination="8CF-HD-xjf" id="z6l-Gx-LaM"/>
                         <outlet property="timer" destination="3nS-Cz-gt6" id="QEI-ig-JdU"/>
