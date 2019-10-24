@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC6D3BFB2362454D002DFF6C /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D3BFA2362454D002DFF6C /* DetailInterfaceController.swift */; };
 		FC9430C9236108B8005C4833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9430C8236108B8005C4833 /* AppDelegate.swift */; };
 		FC9430CB236108B8005C4833 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9430CA236108B8005C4833 /* SceneDelegate.swift */; };
 		FC9430CD236108B8005C4833 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9430CC236108B8005C4833 /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC6D3BFA2362454D002DFF6C /* DetailInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
 		FC9430C5236108B8005C4833 /* Project1NoteDictate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1NoteDictate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9430C8236108B8005C4833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9430CA236108B8005C4833 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				FC9430EF236108B9005C4833 /* ExtensionDelegate.swift */,
 				FC9430F1236108BA005C4833 /* Assets.xcassets */,
 				FC9430F3236108BA005C4833 /* Info.plist */,
+				FC6D3BFA2362454D002DFF6C /* DetailInterfaceController.swift */,
 			);
 			path = "Project1NoteDictate WatchKit Extension";
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				FC9431022361126C005C4833 /* NoteSelectRow.swift in Sources */,
 				FC9430F0236108B9005C4833 /* ExtensionDelegate.swift in Sources */,
+				FC6D3BFB2362454D002DFF6C /* DetailInterfaceController.swift in Sources */,
 				FC9430EE236108B9005C4833 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
 				INFOPLIST_FILE = "Project1NoteDictate WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -491,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
 				INFOPLIST_FILE = "Project1NoteDictate WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,6 +519,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
 				IBSC_MODULE = Project1NoteDictate_WatchKit_Extension;
 				INFOPLIST_FILE = "Project1NoteDictate WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevintanner.Project1NoteDictate.watchkitapp;
@@ -531,6 +538,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
 				IBSC_MODULE = Project1NoteDictate_WatchKit_Extension;
 				INFOPLIST_FILE = "Project1NoteDictate WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevintanner.Project1NoteDictate.watchkitapp;
@@ -548,6 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
 				INFOPLIST_FILE = Project1NoteDictate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -565,6 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
 				INFOPLIST_FILE = Project1NoteDictate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

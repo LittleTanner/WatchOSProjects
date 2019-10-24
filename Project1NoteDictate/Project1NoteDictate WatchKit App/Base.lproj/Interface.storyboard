@@ -11,7 +11,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project1NoteDictate_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="BcU-zq-GgB">
+                        <table alignment="left" pagingScroll="YES" id="BcU-zq-GgB">
                             <items>
                                 <tableRow identifier="Row" id="ZI0-oZ-RlA" customClass="NoteSelectRow" customModule="Project1NoteDictate_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="ePL-uV-VSi">
@@ -21,6 +21,7 @@
                                     </group>
                                     <connections>
                                         <outlet property="textLabel" destination="2mx-jH-RpT" id="JE9-r5-ZaN"/>
+                                        <segue destination="ltx-3a-BNF" kind="push" id="O6l-OF-qqd"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -38,6 +39,20 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="34" y="93"/>
+        </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="R2z-hS-S5q">
+            <objects>
+                <controller id="ltx-3a-BNF" customClass="DetailInterfaceController" customModule="Project1NoteDictate_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="0" id="yca-Ka-Obf"/>
+                    </items>
+                    <connections>
+                        <outlet property="textLabel" destination="yca-Ka-Obf" id="RBn-eM-kcp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="316" y="93"/>
         </scene>
     </scenes>
 </document>
