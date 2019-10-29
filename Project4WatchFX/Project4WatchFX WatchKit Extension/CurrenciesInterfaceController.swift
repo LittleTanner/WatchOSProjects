@@ -58,5 +58,33 @@ class CurrenciesInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    // MARK: - Custom Methods
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        // 1: Grab the row controller and safely typecast
+        guard let row = table.rowController(at: rowIndex) as? CurrencyRow else { return }
+        
+        // 2: Pull out the current list of selected currencies, or use the default list
+        let defaults = UserDefaults.standard
+        var selectedCurrencies = defaults.array(forKey: InterfaceController.selectedCurrenciesKey) as? [String] ?? InterfaceController.defaultCurrencies
+        
+        // 3: Find the name of the tapped currency
+        let selectedCurrency = InterfaceController.currencies[rowIndex]
+        
+        // 4: If that currency was found in our selected currencies, remove it
+        if let index = selectedCurrencies.firstIndex(of: selectedCurrency) {
+            selectedCurrencies.remove(at: index)
+            row.group.setBackgroundColor(deselectedColor)
+        } else {
+            // 5: Otherwise add it
+            selectedCurrencies.append(selectedCurrency)
+            row.group.setBackgroundColor(selectedColor)
+        }
+        
+        // 6: Save the new selected currencies
+        defaults.set(selectedCurrency, forKey: InterfaceController.selectedCurrenciesKey)
+    }
+
 
 }
