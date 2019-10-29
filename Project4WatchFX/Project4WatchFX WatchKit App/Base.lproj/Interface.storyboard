@@ -11,17 +11,34 @@
             <objects>
                 <controller identifier="Home" title="WatchFX" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project4WatchFX_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label height="0.33000000000000002" alignment="center" text="1000" id="GNJ-8B-dzt">
+                        <label height="0.33000000000000002" alignment="center" text="500" id="GNJ-8B-dzt">
                             <fontDescription key="font" type="system" pointSize="52"/>
                         </label>
-                        <slider width="1" height="0.33000000000000002" alignment="left" continuous="YES" value="500" maximum="1000" steps="50" id="BJ1-X8-G3v"/>
+                        <slider width="1" height="0.33000000000000002" alignment="left" continuous="YES" value="500" maximum="1000" steps="50" id="BJ1-X8-G3v">
+                            <connections>
+                                <action selector="amountChanged:" destination="AgC-eL-Hgc" id="4LU-WM-Aor"/>
+                            </connections>
+                        </slider>
                         <group width="1" height="0.33000000000000002" alignment="left" id="A47-Wg-HEJ">
                             <items>
-                                <picker width="0.59999999999999998" height="1" alignment="left" focusStyle="stack" id="w70-nW-6nl"/>
-                                <button width="0.40000000000000002" height="1" alignment="left" title="Go" id="qPR-Vs-BOs"/>
+                                <picker width="0.59999999999999998" height="1" alignment="left" focusStyle="stack" id="w70-nW-6nl">
+                                    <connections>
+                                        <action selector="baseCurrencyChanged:" destination="AgC-eL-Hgc" id="VX1-Cw-joX"/>
+                                    </connections>
+                                </picker>
+                                <button width="0.40000000000000002" height="1" alignment="left" title="Go" id="qPR-Vs-BOs">
+                                    <connections>
+                                        <action selector="convertTapped" destination="AgC-eL-Hgc" id="EWQ-R2-Q2P"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="amountLabel" destination="GNJ-8B-dzt" id="aZe-4e-1vJ"/>
+                        <outlet property="amountSlider" destination="BJ1-X8-G3v" id="zNq-ik-oF1"/>
+                        <outlet property="currencyPicker" destination="w70-nW-6nl" id="1pH-8h-enK"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="34" y="31"/>

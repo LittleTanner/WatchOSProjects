@@ -12,6 +12,15 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var amountLabel: WKInterfaceLabel!
+    @IBOutlet weak var amountSlider: WKInterfaceSlider!
+    @IBOutlet weak var currencyPicker: WKInterfacePicker!
+    
+    
+    // MARK: - Lifecycle Methods
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -28,4 +37,15 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    
+    // MARK: - Actions
+    
+    @IBAction func convertTapped() {
+    }
+    
+    @IBAction func amountChanged(_ value: Float) {
+    }
+    
+    @IBAction func baseCurrencyChanged(_ value: Int) {
+    }
 }
