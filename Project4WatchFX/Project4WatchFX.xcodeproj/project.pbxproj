@@ -20,6 +20,8 @@
 		FCAA47562368ECE800451874 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA47552368ECE800451874 /* InterfaceController.swift */; };
 		FCAA47582368ECE800451874 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA47572368ECE800451874 /* ExtensionDelegate.swift */; };
 		FCAA475A2368ECE900451874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCAA47592368ECE900451874 /* Assets.xcassets */; };
+		FCAA476A2368F87D00451874 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA47692368F87D00451874 /* CurrencyRow.swift */; };
+		FCAA476C2368F97400451874 /* CurrenciesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA476B2368F97400451874 /* CurrenciesInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		FCAA47572368ECE800451874 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		FCAA47592368ECE900451874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCAA475B2368ECE900451874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCAA47692368F87D00451874 /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyRow.swift; path = "Project4WatchFX WatchKit Extension/CurrencyRow.swift"; sourceTree = SOURCE_ROOT; };
+		FCAA476B2368F97400451874 /* CurrenciesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				FCAA47552368ECE800451874 /* InterfaceController.swift */,
+				FCAA47692368F87D00451874 /* CurrencyRow.swift */,
+				FCAA476B2368F97400451874 /* CurrenciesInterfaceController.swift */,
 				FCAA47572368ECE800451874 /* ExtensionDelegate.swift */,
 				FCAA47592368ECE900451874 /* Assets.xcassets */,
 				FCAA475B2368ECE900451874 /* Info.plist */,
@@ -299,7 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCAA476A2368F87D00451874 /* CurrencyRow.swift in Sources */,
 				FCAA47582368ECE800451874 /* ExtensionDelegate.swift in Sources */,
+				FCAA476C2368F97400451874 /* CurrenciesInterfaceController.swift in Sources */,
 				FCAA47562368ECE800451874 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

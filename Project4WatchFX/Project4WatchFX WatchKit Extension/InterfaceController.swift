@@ -18,6 +18,15 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var amountSlider: WKInterfaceSlider!
     @IBOutlet weak var currencyPicker: WKInterfacePicker!
     
+    // MARK: - Properties
+    
+    static let currencies = ["USD", "AUD", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "JPY", "SGD"]
+    static let defaultCurrencies = ["USD", "EUR"]
+    
+    var currentCurrency = "USD"
+    var currentAmount = 500
+    
+    static let selectedCurrenciesKey = "SelectedCurrencies"
     
     // MARK: - Lifecycle Methods
 
@@ -25,6 +34,15 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        var items = [WKPickerItem]()
+        
+        for currency in InterfaceController.currencies {
+            let item = WKPickerItem()
+            item.title = currency
+            items.append(item)
+        }
+        
+        currencyPicker.setItems(items)
     }
     
     override func willActivate() {
@@ -44,8 +62,12 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func amountChanged(_ value: Float) {
+        currentAmount = Int(value)
+        
+        amountLabel.setText(String(currentAmount))
     }
     
     @IBAction func baseCurrencyChanged(_ value: Int) {
+        currentCurrency = InterfaceController.currencies[value]
     }
 }
