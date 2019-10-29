@@ -20,6 +20,8 @@
 		FC7E3E7D2367D32E007EB76E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E3E7C2367D32E007EB76E /* InterfaceController.swift */; };
 		FC7E3E7F2367D32E007EB76E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E3E7E2367D32E007EB76E /* ExtensionDelegate.swift */; };
 		FC7E3E812367D32F007EB76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7E3E802367D32F007EB76E /* Assets.xcassets */; };
+		FC7E3E922367D713007EB76E /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E3E902367D713007EB76E /* KeychainItemAccessibility.swift */; };
+		FC7E3E932367D713007EB76E /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7E3E912367D713007EB76E /* KeychainWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		FC7E3E7E2367D32E007EB76E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		FC7E3E802367D32F007EB76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC7E3E822367D32F007EB76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7E3E902367D713007EB76E /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		FC7E3E912367D713007EB76E /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			children = (
 				FC7E3E7C2367D32E007EB76E /* InterfaceController.swift */,
 				FC7E3E7E2367D32E007EB76E /* ExtensionDelegate.swift */,
+				FC7E3E902367D713007EB76E /* KeychainItemAccessibility.swift */,
+				FC7E3E912367D713007EB76E /* KeychainWrapper.swift */,
 				FC7E3E802367D32F007EB76E /* Assets.xcassets */,
 				FC7E3E822367D32F007EB76E /* Info.plist */,
 			);
@@ -300,7 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC7E3E7F2367D32E007EB76E /* ExtensionDelegate.swift in Sources */,
+				FC7E3E932367D713007EB76E /* KeychainWrapper.swift in Sources */,
 				FC7E3E7D2367D32E007EB76E /* InterfaceController.swift in Sources */,
+				FC7E3E922367D713007EB76E /* KeychainItemAccessibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
