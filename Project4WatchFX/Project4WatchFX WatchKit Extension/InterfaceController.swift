@@ -22,11 +22,11 @@ class InterfaceController: WKInterfaceController {
     
     static let currencies = ["USD", "AUD", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "JPY", "SGD"]
     static let defaultCurrencies = ["USD", "EUR"]
+    static let selectedCurrenciesKey = "SelectedCurrencies"
     
     var currentCurrency = "USD"
     var currentAmount = 500
     
-    static let selectedCurrenciesKey = "SelectedCurrencies"
     
     // MARK: - Lifecycle Methods
 

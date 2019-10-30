@@ -46,11 +46,13 @@ class ResultsInterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        WKExtension.shared().isAutorotating = true
     }
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        WKExtension.shared().isAutorotating = false
     }
 
     // MARK: - Actions
@@ -108,7 +110,23 @@ class ResultsInterfaceController: WKInterfaceController {
     }
     
     func updateTable() {
+        // Load as many rows as we have currencies
+        table.setNumberOfRows(fetchedCurrencies.count, withRowType: "Row")
         
+        // Loop over each currency, getting its position and symbol
+        for (index, currency) in fetchedCurrencies.enumerated() {
+            // Find the row at that position
+            guard let row = table.rowController(at: index) as? CurrencyRow else { return }
+            
+            // Multiply the rate by the user's input amount
+            let value = currency.rate * amountToConvert
+            
+            // Convert it to a rounded string
+            let formattedValue = String(format: "%.2f", value)
+            
+            // Show it in the lable
+            row.textLabel.setText("\(formattedValue) \(currency.symbol)")
+        }
     }
 
     

@@ -26,8 +26,7 @@ class CurrenciesInterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
+
         // Set up as many rows as we have currencies
         table.setNumberOfRows(InterfaceController.currencies.count, withRowType: "Row")
         
@@ -37,7 +36,7 @@ class CurrenciesInterfaceController: WKInterfaceController {
         
         // Loop over all the currencies, configuring the table rows
         for (index, currency) in InterfaceController.currencies.enumerated() {
-            guard let row = table.rowController(at: index) as? CurrencyRow else { continue }
+            guard let row = table.rowController(at: index) as? CurrencyRow else { return }
             row.textLabel.setText(currency)
             
             // Color the row's group depending on whether it's selected
@@ -83,8 +82,6 @@ class CurrenciesInterfaceController: WKInterfaceController {
         }
         
         // 6: Save the new selected currencies
-        defaults.set(selectedCurrency, forKey: InterfaceController.selectedCurrenciesKey)
+        defaults.set(selectedCurrencies, forKey: InterfaceController.selectedCurrenciesKey)
     }
-
-
 }
