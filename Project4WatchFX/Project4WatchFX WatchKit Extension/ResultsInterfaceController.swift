@@ -31,6 +31,16 @@ class ResultsInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        guard let settings = context as? [String: String] else { return }
+        guard let amount = settings["amount"] else { return }
+        guard let baseCurrency = settings["base"] else { return }
+        
+        amountToConvert = Double(amount) ?? 50
+        setTitle("\(amount) \(baseCurrency)")
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            self.fetchData(for: baseCurrency)
+        }
     }
 
     override func willActivate() {
@@ -46,7 +56,36 @@ class ResultsInterfaceController: WKInterfaceController {
     // MARK: - Actions
     
     @IBAction func doneTapped() {
+        WKInterfaceController.reloadRootPageControllers(withNames: ["Home", "Currencies"], contexts: nil, orientation: .horizontal, pageIndex: 0)
     }
     
 
+    // MARK: - Custom Methods
+    
+    func fetchData(for baseCurrency: String) {
+        if let url = URL(string: "https://openexchangerates.org/api/latest.json?app_id=\(appID)&base=\(baseCurrency)") {
+            let urlRequest = URLRequest(url: url)
+            
+            URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                if let data = data {
+                    self.parse(data)
+                } else {
+                    DispatchQueue.main.async {
+                        self.status.setText("Fetch failed")
+                        self.done.setHidden(false)
+                    }
+                }
+            }.resume()
+        }
+    }
+    
+    func parse(_ contents: Data) {
+        
+    }
+    
+    func updateTable() {
+        
+    }
+
+    
 }
