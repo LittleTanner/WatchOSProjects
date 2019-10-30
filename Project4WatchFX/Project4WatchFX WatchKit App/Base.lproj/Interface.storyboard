@@ -72,5 +72,42 @@
             </objects>
             <point key="canvasLocation" x="318" y="31"/>
         </scene>
+        <!--Results-->
+        <scene sceneID="Ovl-Ts-SJq">
+            <objects>
+                <controller identifier="Results" id="LUn-PC-wB3" customClass="ResultsInterfaceController" customModule="Project4WatchFX_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" hidden="YES" id="I6p-TY-AJC">
+                            <items>
+                                <tableRow identifier="Row" selectable="NO" id="9ai-yx-q6U" customClass="CurrencyRow" customModule="Project4WatchFX_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="qxI-zc-SkW">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="Dc0-oP-FMU"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="group" destination="qxI-zc-SkW" id="ZfV-dg-DiL"/>
+                                        <outlet property="textLabel" destination="Dc0-oP-FMU" id="e1R-Vw-gaA"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" hidden="YES" title="Done" id="jrK-Sn-Nwa">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="doneTapped" destination="LUn-PC-wB3" id="avg-5S-FX3"/>
+                            </connections>
+                        </button>
+                        <label alignment="center" verticalAlignment="center" text="Fetching..." id="7vC-ue-XKi"/>
+                    </items>
+                    <connections>
+                        <outlet property="done" destination="jrK-Sn-Nwa" id="dpY-0A-jsq"/>
+                        <outlet property="status" destination="7vC-ue-XKi" id="aus-Ug-ZpX"/>
+                        <outlet property="table" destination="I6p-TY-AJC" id="EVM-9q-Lqi"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="377"/>
+        </scene>
     </scenes>
 </document>

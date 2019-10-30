@@ -22,6 +22,7 @@
 		FCAA475A2368ECE900451874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCAA47592368ECE900451874 /* Assets.xcassets */; };
 		FCAA476A2368F87D00451874 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA47692368F87D00451874 /* CurrencyRow.swift */; };
 		FCAA476C2368F97400451874 /* CurrenciesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA476B2368F97400451874 /* CurrenciesInterfaceController.swift */; };
+		FCDF1B81236A46C1009BAB20 /* ResultsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDF1B80236A46C1009BAB20 /* ResultsInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		FCAA475B2368ECE900451874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCAA47692368F87D00451874 /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyRow.swift; path = "Project4WatchFX WatchKit Extension/CurrencyRow.swift"; sourceTree = SOURCE_ROOT; };
 		FCAA476B2368F97400451874 /* CurrenciesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesInterfaceController.swift; sourceTree = "<group>"; };
+		FCDF1B80236A46C1009BAB20 /* ResultsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				FCAA47572368ECE800451874 /* ExtensionDelegate.swift */,
 				FCAA47592368ECE900451874 /* Assets.xcassets */,
 				FCAA475B2368ECE900451874 /* Info.plist */,
+				FCDF1B80236A46C1009BAB20 /* ResultsInterfaceController.swift */,
 			);
 			path = "Project4WatchFX WatchKit Extension";
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCDF1B81236A46C1009BAB20 /* ResultsInterfaceController.swift in Sources */,
 				FCAA476A2368F87D00451874 /* CurrencyRow.swift in Sources */,
 				FCAA47582368ECE800451874 /* ExtensionDelegate.swift in Sources */,
 				FCAA476C2368F97400451874 /* CurrenciesInterfaceController.swift in Sources */,

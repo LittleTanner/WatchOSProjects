@@ -59,6 +59,9 @@ class InterfaceController: WKInterfaceController {
     // MARK: - Actions
     
     @IBAction func convertTapped() {
+        let context = ["amount": String(currentAmount), "base": currentCurrency]
+        
+        WKInterfaceController.reloadRootPageControllers(withNames: ["Results"], contexts: [context], orientation: .horizontal, pageIndex: 0)
     }
     
     @IBAction func amountChanged(_ value: Float) {
