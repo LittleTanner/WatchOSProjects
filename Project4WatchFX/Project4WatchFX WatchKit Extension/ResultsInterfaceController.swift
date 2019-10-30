@@ -18,6 +18,12 @@ class ResultsInterfaceController: WKInterfaceController {
     @IBOutlet weak var status: WKInterfaceLabel!
     @IBOutlet weak var done: WKInterfaceButton!
     
+    // MARK: - Properties
+    
+    var fetchedCurrencies = [(symbol: String, rate: Double)]()
+    var amountToConvert = 0.0
+    let appID = "8eb365740067451482177eb66947a386"
+
 
     // MARK: - Lifecycle Methods
 
