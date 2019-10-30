@@ -80,7 +80,31 @@ class ResultsInterfaceController: WKInterfaceController {
     }
     
     func parse(_ contents: Data) {
+        let decoder = JSONDecoder()
+        guard let result = try? decoder.decode(CurrencyResult.self, from: contents) else {
+            // we failed to decode - show an error!
+            DispatchQueue.main.async {
+                self.status.setText("Fetch failed")
+                self.done.setHidden(false)
+            }
+            return
+        }
         
+        // Load their currency selection
+        let defaults = UserDefaults.standard
+        let selectedCurrencies = defaults.array(forKey: InterfaceController.selectedCurrenciesKey) as? [String] ?? InterfaceController.defaultCurrencies
+        
+        for symbol in result.rates {
+            // Only include currencies the user wants
+            guard selectedCurrencies.contains(symbol.key) else { continue }
+            let rateName = symbol.key
+            let rateValue = symbol.value
+            fetchedCurrencies.append((symbol: rateName, rate: rateValue))
+        }
+        updateTable()
+        status.setHidden(true)
+        table.setHidden(false)
+        done.setHidden(false)
     }
     
     func updateTable() {

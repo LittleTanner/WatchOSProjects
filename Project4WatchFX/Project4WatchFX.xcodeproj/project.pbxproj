@@ -23,6 +23,7 @@
 		FCAA476A2368F87D00451874 /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA47692368F87D00451874 /* CurrencyRow.swift */; };
 		FCAA476C2368F97400451874 /* CurrenciesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAA476B2368F97400451874 /* CurrenciesInterfaceController.swift */; };
 		FCDF1B81236A46C1009BAB20 /* ResultsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDF1B80236A46C1009BAB20 /* ResultsInterfaceController.swift */; };
+		FCDF1B83236A4E58009BAB20 /* CurrencyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDF1B82236A4E58009BAB20 /* CurrencyResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		FCAA47692368F87D00451874 /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyRow.swift; path = "Project4WatchFX WatchKit Extension/CurrencyRow.swift"; sourceTree = SOURCE_ROOT; };
 		FCAA476B2368F97400451874 /* CurrenciesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesInterfaceController.swift; sourceTree = "<group>"; };
 		FCDF1B80236A46C1009BAB20 /* ResultsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsInterfaceController.swift; sourceTree = "<group>"; };
+		FCDF1B82236A4E58009BAB20 /* CurrencyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				FCAA47592368ECE900451874 /* Assets.xcassets */,
 				FCAA475B2368ECE900451874 /* Info.plist */,
 				FCDF1B80236A46C1009BAB20 /* ResultsInterfaceController.swift */,
+				FCDF1B82236A4E58009BAB20 /* CurrencyResult.swift */,
 			);
 			path = "Project4WatchFX WatchKit Extension";
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCDF1B81236A46C1009BAB20 /* ResultsInterfaceController.swift in Sources */,
+				FCDF1B83236A4E58009BAB20 /* CurrencyResult.swift in Sources */,
 				FCAA476A2368F87D00451874 /* CurrencyRow.swift in Sources */,
 				FCAA47582368ECE800451874 /* ExtensionDelegate.swift in Sources */,
 				FCAA476C2368F97400451874 /* CurrenciesInterfaceController.swift in Sources */,
