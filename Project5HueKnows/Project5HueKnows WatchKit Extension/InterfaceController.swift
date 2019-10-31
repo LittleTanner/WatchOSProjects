@@ -75,6 +75,16 @@ class InterfaceController: WKInterfaceController {
     func levelUp() {
         currentLevel += 1
         
+        if currentLevel == 10 {
+            let playAgain = WKAlertAction(title: "Play Again", style: .default) {
+                self.startNewGame()
+            }
+            
+            let timePassed = Date().timeIntervalSince(startTime)
+            presentAlert(withTitle: "You Win!", message: "You finished in \(Int(timePassed)) seconds.", preferredStyle: .alert, actions: [playAgain])
+            return
+        }
+        
         // Pull out the color names and shuffle them with the buttons
         var colorKeys = Array(colors.keys)
         colorKeys.shuffle()
