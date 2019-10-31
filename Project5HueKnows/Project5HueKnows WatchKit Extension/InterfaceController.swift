@@ -55,15 +55,19 @@ class InterfaceController: WKInterfaceController {
     // MARK: - Actions
     
     @IBAction func tlButtonTapped() {
+        buttonTapped(tlButton)
     }
     
     @IBAction func trButtonTapped() {
+        buttonTapped(trButton)
     }
     
     @IBAction func blButtonTapped() {
+        buttonTapped(blButton)
     }
     
     @IBAction func brButtonTapped() {
+        buttonTapped(brButton)
     }
     
     // MARK: - Custom Methods
@@ -100,6 +104,14 @@ class InterfaceController: WKInterfaceController {
         levelUp()
     }
 
-
+    func buttonTapped(_ button: WKInterfaceButton) {
+        if button == buttons[0] {
+            // Correct button!
+            levelUp()
+        } else {
+            // Wrong - make them try again
+            button.setEnabled(false)
+        }
+    }
 
 }
