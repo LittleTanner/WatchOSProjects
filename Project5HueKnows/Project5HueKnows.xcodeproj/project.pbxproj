@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCE91253236B8C3B00E1FF83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE91252236B8C3B00E1FF83 /* AppDelegate.swift */; };
+		FCE91255236B8C3B00E1FF83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE91254236B8C3B00E1FF83 /* SceneDelegate.swift */; };
+		FCE91257236B8C3B00E1FF83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE91256236B8C3B00E1FF83 /* ViewController.swift */; };
+		FCE9125A236B8C3B00E1FF83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE91258236B8C3B00E1FF83 /* Main.storyboard */; };
+		FCE9125C236B8C3D00E1FF83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE9125B236B8C3D00E1FF83 /* Assets.xcassets */; };
+		FCE9125F236B8C3D00E1FF83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE9125D236B8C3D00E1FF83 /* LaunchScreen.storyboard */; };
+		FCE91264236B8C3D00E1FF83 /* Project5HueKnows WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FCE91263236B8C3D00E1FF83 /* Project5HueKnows WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FCE9126A236B8C3D00E1FF83 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE91268236B8C3D00E1FF83 /* Interface.storyboard */; };
+		FCE9126C236B8C3E00E1FF83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE9126B236B8C3E00E1FF83 /* Assets.xcassets */; };
+		FCE91273236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCE91272236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FCE91278236B8C3E00E1FF83 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE91277236B8C3E00E1FF83 /* InterfaceController.swift */; };
+		FCE9127A236B8C3E00E1FF83 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE91279236B8C3E00E1FF83 /* ExtensionDelegate.swift */; };
+		FCE9127C236B8C3E00E1FF83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE9127B236B8C3E00E1FF83 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCE91265236B8C3D00E1FF83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCE91247236B8C3B00E1FF83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE91262236B8C3D00E1FF83;
+			remoteInfo = "Project5HueKnows WatchKit App";
+		};
+		FCE91274236B8C3E00E1FF83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCE91247236B8C3B00E1FF83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE91271236B8C3E00E1FF83;
+			remoteInfo = "Project5HueKnows WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FCE91283236B8C3E00E1FF83 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FCE91273236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE91287236B8C3E00E1FF83 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FCE91264236B8C3D00E1FF83 /* Project5HueKnows WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FCE9124F236B8C3B00E1FF83 /* Project5HueKnows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project5HueKnows.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE91252236B8C3B00E1FF83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCE91254236B8C3B00E1FF83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FCE91256236B8C3B00E1FF83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCE91259236B8C3B00E1FF83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCE9125B236B8C3D00E1FF83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCE9125E236B8C3D00E1FF83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCE91260236B8C3D00E1FF83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCE91263236B8C3D00E1FF83 /* Project5HueKnows WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project5HueKnows WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE91269236B8C3D00E1FF83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FCE9126B236B8C3E00E1FF83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCE9126D236B8C3E00E1FF83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCE91272236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Project5HueKnows WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE91277236B8C3E00E1FF83 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		FCE91279236B8C3E00E1FF83 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		FCE9127B236B8C3E00E1FF83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCE9127D236B8C3E00E1FF83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCE9124C236B8C3B00E1FF83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE9126F236B8C3E00E1FF83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCE91246236B8C3B00E1FF83 = {
+			isa = PBXGroup;
+			children = (
+				FCE91251236B8C3B00E1FF83 /* Project5HueKnows */,
+				FCE91267236B8C3D00E1FF83 /* Project5HueKnows WatchKit App */,
+				FCE91276236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension */,
+				FCE91250236B8C3B00E1FF83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCE91250236B8C3B00E1FF83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCE9124F236B8C3B00E1FF83 /* Project5HueKnows.app */,
+				FCE91263236B8C3D00E1FF83 /* Project5HueKnows WatchKit App.app */,
+				FCE91272236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCE91251236B8C3B00E1FF83 /* Project5HueKnows */ = {
+			isa = PBXGroup;
+			children = (
+				FCE91252236B8C3B00E1FF83 /* AppDelegate.swift */,
+				FCE91254236B8C3B00E1FF83 /* SceneDelegate.swift */,
+				FCE91256236B8C3B00E1FF83 /* ViewController.swift */,
+				FCE91258236B8C3B00E1FF83 /* Main.storyboard */,
+				FCE9125B236B8C3D00E1FF83 /* Assets.xcassets */,
+				FCE9125D236B8C3D00E1FF83 /* LaunchScreen.storyboard */,
+				FCE91260236B8C3D00E1FF83 /* Info.plist */,
+			);
+			path = Project5HueKnows;
+			sourceTree = "<group>";
+		};
+		FCE91267236B8C3D00E1FF83 /* Project5HueKnows WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				FCE91268236B8C3D00E1FF83 /* Interface.storyboard */,
+				FCE9126B236B8C3E00E1FF83 /* Assets.xcassets */,
+				FCE9126D236B8C3E00E1FF83 /* Info.plist */,
+			);
+			path = "Project5HueKnows WatchKit App";
+			sourceTree = "<group>";
+		};
+		FCE91276236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FCE91277236B8C3E00E1FF83 /* InterfaceController.swift */,
+				FCE91279236B8C3E00E1FF83 /* ExtensionDelegate.swift */,
+				FCE9127B236B8C3E00E1FF83 /* Assets.xcassets */,
+				FCE9127D236B8C3E00E1FF83 /* Info.plist */,
+			);
+			path = "Project5HueKnows WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCE9124E236B8C3B00E1FF83 /* Project5HueKnows */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE91288236B8C3E00E1FF83 /* Build configuration list for PBXNativeTarget "Project5HueKnows" */;
+			buildPhases = (
+				FCE9124B236B8C3B00E1FF83 /* Sources */,
+				FCE9124C236B8C3B00E1FF83 /* Frameworks */,
+				FCE9124D236B8C3B00E1FF83 /* Resources */,
+				FCE91287236B8C3E00E1FF83 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCE91266236B8C3D00E1FF83 /* PBXTargetDependency */,
+			);
+			name = Project5HueKnows;
+			productName = Project5HueKnows;
+			productReference = FCE9124F236B8C3B00E1FF83 /* Project5HueKnows.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCE91262236B8C3D00E1FF83 /* Project5HueKnows WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE91284236B8C3E00E1FF83 /* Build configuration list for PBXNativeTarget "Project5HueKnows WatchKit App" */;
+			buildPhases = (
+				FCE91261236B8C3D00E1FF83 /* Resources */,
+				FCE91283236B8C3E00E1FF83 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCE91275236B8C3E00E1FF83 /* PBXTargetDependency */,
+			);
+			name = "Project5HueKnows WatchKit App";
+			productName = "Project5HueKnows WatchKit App";
+			productReference = FCE91263236B8C3D00E1FF83 /* Project5HueKnows WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		FCE91271236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE91280236B8C3E00E1FF83 /* Build configuration list for PBXNativeTarget "Project5HueKnows WatchKit Extension" */;
+			buildPhases = (
+				FCE9126E236B8C3E00E1FF83 /* Sources */,
+				FCE9126F236B8C3E00E1FF83 /* Frameworks */,
+				FCE91270236B8C3E00E1FF83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Project5HueKnows WatchKit Extension";
+			productName = "Project5HueKnows WatchKit Extension";
+			productReference = FCE91272236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCE91247236B8C3B00E1FF83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Kevin Tanner";
+				TargetAttributes = {
+					FCE9124E236B8C3B00E1FF83 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					FCE91262236B8C3D00E1FF83 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					FCE91271236B8C3E00E1FF83 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = FCE9124A236B8C3B00E1FF83 /* Build configuration list for PBXProject "Project5HueKnows" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCE91246236B8C3B00E1FF83;
+			productRefGroup = FCE91250236B8C3B00E1FF83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCE9124E236B8C3B00E1FF83 /* Project5HueKnows */,
+				FCE91262236B8C3D00E1FF83 /* Project5HueKnows WatchKit App */,
+				FCE91271236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCE9124D236B8C3B00E1FF83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE9125F236B8C3D00E1FF83 /* LaunchScreen.storyboard in Resources */,
+				FCE9125C236B8C3D00E1FF83 /* Assets.xcassets in Resources */,
+				FCE9125A236B8C3B00E1FF83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE91261236B8C3D00E1FF83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE9126C236B8C3E00E1FF83 /* Assets.xcassets in Resources */,
+				FCE9126A236B8C3D00E1FF83 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE91270236B8C3E00E1FF83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE9127C236B8C3E00E1FF83 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCE9124B236B8C3B00E1FF83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE91257236B8C3B00E1FF83 /* ViewController.swift in Sources */,
+				FCE91253236B8C3B00E1FF83 /* AppDelegate.swift in Sources */,
+				FCE91255236B8C3B00E1FF83 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE9126E236B8C3E00E1FF83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE9127A236B8C3E00E1FF83 /* ExtensionDelegate.swift in Sources */,
+				FCE91278236B8C3E00E1FF83 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCE91266236B8C3D00E1FF83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCE91262236B8C3D00E1FF83 /* Project5HueKnows WatchKit App */;
+			targetProxy = FCE91265236B8C3D00E1FF83 /* PBXContainerItemProxy */;
+		};
+		FCE91275236B8C3E00E1FF83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCE91271236B8C3E00E1FF83 /* Project5HueKnows WatchKit Extension */;
+			targetProxy = FCE91274236B8C3E00E1FF83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCE91258236B8C3B00E1FF83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE91259236B8C3B00E1FF83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCE9125D236B8C3D00E1FF83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE9125E236B8C3D00E1FF83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FCE91268236B8C3D00E1FF83 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE91269236B8C3D00E1FF83 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCE9127E236B8C3E00E1FF83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCE9127F236B8C3E00E1FF83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCE91281236B8C3E00E1FF83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
+				INFOPLIST_FILE = "Project5HueKnows WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevintanner.Project5HueKnows.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		FCE91282236B8C3E00E1FF83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
+				INFOPLIST_FILE = "Project5HueKnows WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevintanner.Project5HueKnows.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		FCE91285236B8C3E00E1FF83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
+				IBSC_MODULE = Project5HueKnows_WatchKit_Extension;
+				INFOPLIST_FILE = "Project5HueKnows WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevintanner.Project5HueKnows.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		FCE91286236B8C3E00E1FF83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
+				IBSC_MODULE = Project5HueKnows_WatchKit_Extension;
+				INFOPLIST_FILE = "Project5HueKnows WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevintanner.Project5HueKnows.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		FCE91289236B8C3E00E1FF83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
+				INFOPLIST_FILE = Project5HueKnows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevintanner.Project5HueKnows;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCE9128A236B8C3E00E1FF83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C39EPG5VUE;
+				INFOPLIST_FILE = Project5HueKnows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevintanner.Project5HueKnows;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCE9124A236B8C3B00E1FF83 /* Build configuration list for PBXProject "Project5HueKnows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE9127E236B8C3E00E1FF83 /* Debug */,
+				FCE9127F236B8C3E00E1FF83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCE91280236B8C3E00E1FF83 /* Build configuration list for PBXNativeTarget "Project5HueKnows WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE91281236B8C3E00E1FF83 /* Debug */,
+				FCE91282236B8C3E00E1FF83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCE91284236B8C3E00E1FF83 /* Build configuration list for PBXNativeTarget "Project5HueKnows WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE91285236B8C3E00E1FF83 /* Debug */,
+				FCE91286236B8C3E00E1FF83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCE91288236B8C3E00E1FF83 /* Build configuration list for PBXNativeTarget "Project5HueKnows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE91289236B8C3E00E1FF83 /* Debug */,
+				FCE9128A236B8C3E00E1FF83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCE91247236B8C3B00E1FF83 /* Project object */;
+}
