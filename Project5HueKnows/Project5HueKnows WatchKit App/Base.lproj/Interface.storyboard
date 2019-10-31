@@ -1,15 +1,54 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Project5HueKnows_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="0.5" alignment="left" id="iSS-x4-Grs">
+                            <items>
+                                <button width="0.5" height="1" alignment="left" title="Button" id="Gts-rF-oEp">
+                                    <connections>
+                                        <action selector="tlButtonTapped" destination="AgC-eL-Hgc" id="aj7-qt-Gze"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" title="Button" id="gh3-lG-Bcq">
+                                    <connections>
+                                        <action selector="trButtonTapped" destination="AgC-eL-Hgc" id="pzF-yY-U4a"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="0.5" alignment="left" id="CmS-Zz-qz9">
+                            <items>
+                                <button width="0.5" height="1" alignment="left" title="Button" id="fkN-tV-mK0">
+                                    <connections>
+                                        <action selector="blButtonTapped" destination="AgC-eL-Hgc" id="N4K-ae-DY7"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" title="Button" id="eOm-f8-54v">
+                                    <connections>
+                                        <action selector="brButtonTapped" destination="AgC-eL-Hgc" id="Gao-DE-6m1"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="blButton" destination="fkN-tV-mK0" id="Ap3-Rj-lsf"/>
+                        <outlet property="brButton" destination="eOm-f8-54v" id="YYc-y3-Phy"/>
+                        <outlet property="tlButton" destination="Gts-rF-oEp" id="IGn-VU-mkZ"/>
+                        <outlet property="trButton" destination="gh3-lG-Bcq" id="EVj-0V-Qd3"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="-101" y="31"/>
         </scene>
     </scenes>
 </document>
