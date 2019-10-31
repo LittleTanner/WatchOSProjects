@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import UserNotifications
 
 
 class InterfaceController: WKInterfaceController {
@@ -40,6 +41,7 @@ class InterfaceController: WKInterfaceController {
         
         buttons += [tlButton, trButton, blButton, brButton]
         startNewGame()
+        setPlayReminder()
     }
     
     override func willActivate() {
@@ -68,6 +70,12 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func brButtonTapped() {
         buttonTapped(brButton)
+    }
+    
+    @IBAction func startNewGame() {
+        startTime = Date()
+        currentLevel = 0
+        levelUp()
     }
     
     // MARK: - Custom Methods
@@ -107,12 +115,6 @@ class InterfaceController: WKInterfaceController {
             }
         }
     }
-    
-    @IBAction func startNewGame() {
-        startTime = Date()
-        currentLevel = 0
-        levelUp()
-    }
 
     func buttonTapped(_ button: WKInterfaceButton) {
         if button == buttons[0] {
@@ -123,5 +125,41 @@ class InterfaceController: WKInterfaceController {
             button.setEnabled(false)
         }
     }
+    
+    func createNotification() {
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "We miss you!"
+        content.body = "Come back and play the game some more!"
+        content.categoryIdentifier = "play_reminder"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        center.add(request)
+    }
 
+    func setPlayReminder() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (success, error) in
+            if success {
+                self.registerCategories()
+                center.removeAllPendingNotificationRequests()
+                self.createNotification()
+            }
+        }
+    }
+    
+    func registerCategories() {
+        let center = UNUserNotificationCenter.current()
+        
+        let play = UNNotificationAction(identifier: "play", title: "Play Now", options: .foreground)
+        
+        let category = UNNotificationCategory(identifier: "play_reminder", actions: [play], intentIdentifiers: [])
+        
+        center.setNotificationCategories([category])
+    }
+    
 }
