@@ -108,7 +108,7 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
-    func startNewGame() {
+    @IBAction func startNewGame() {
         startTime = Date()
         currentLevel = 0
         levelUp()
