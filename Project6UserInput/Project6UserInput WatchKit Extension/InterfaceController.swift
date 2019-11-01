@@ -45,6 +45,37 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func recordingTapped() {
+        // Set where we'll read and save from
+        let saveURL = getDocumentsDirectory().appendingPathComponent("recording.wav")
+        
+        if FileManager.default.fileExists(atPath: saveURL.path) {
+            // If we have a recording already, play it
+            let options = [WKMediaPlayerControllerOptionsAutoplayKey: "true"]
+            
+            presentMediaPlayerController(with: saveURL, options: options) { (didPlayToEnd, endTime, error) in
+                // do nothing here
+            }
+        } else {
+            // We don't have a recording; make one
+            let options: [String: Any] = [WKAudioRecorderControllerOptionsMaximumDurationKey: 60,
+                                          WKAudioRecorderControllerOptionsActionTitleKey: "Done"]
+            
+            presentAudioRecorderController(withOutputURL: saveURL, preset: .narrowBandSpeech, options: options) { (success, error) in
+                if success {
+                    print("Save successfully!")
+                } else {
+                    print(error?.localizedDescription ?? "Unknown error")
+                }
+            }
+        }
     }
+    
+    // MARK: - Custom Methods
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+
     
 }
