@@ -31,9 +31,17 @@ class InterfaceController: WKInterfaceController {
     // MARK: - Actions
     
     @IBAction func dictateTapped() {
+        presentTextInputController(withSuggestions: nil, allowedInputMode: .plain) { result in
+            guard let result = result?.first as? String else { return }
+            print(result)
+        }
     }
     
     @IBAction func multiInputTapped() {
+        presentTextInputController(withSuggestions: ["Hacking with Swift","Hacking with MacOS", "Server-Side Swift"], allowedInputMode: .allowEmoji) { result in
+            guard let result = result?.first as? String else { return }
+            print(result)
+        }
     }
     
     @IBAction func recordingTapped() {
