@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WKCrownDelegate {
 
     // MARK: - Outlets
 
@@ -19,7 +19,11 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var nextButton: WKInterfaceButton!
     @IBOutlet weak var timer: WKInterfaceTimer!
     
+    // MARK: - Properties
     
+    var currentSafeValue: Float = 50
+    var targetSafeValue = 0
+
     
     // MARK: - Lifecycle Methods
 
@@ -39,9 +43,24 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    override func didAppear() {
+        crownSequencer.focus()
+        crownSequencer.delegate = self
+    }
+    
     // MARK: - Actions
 
     @IBAction func nextTapped() {
     }
+    
+    // MARK: - Custom Methods
+    
+    func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
+        currentSafeValue += Float(rotationalDelta)
+        currentSafeValue = min(max(0, currentSafeValue), 100)
+        safeValue.setValue(currentSafeValue)
+        nextButton.setTitle("Enter \(Int(currentSafeValue))")
+    }
+
     
 }
