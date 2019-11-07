@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import HealthKit
 
 class WorkoutInterfaceController: WKInterfaceController {
 
@@ -20,12 +20,49 @@ class WorkoutInterfaceController: WKInterfaceController {
     @IBOutlet weak var resumeButton: WKInterfaceButton!
     @IBOutlet weak var endButton: WKInterfaceButton!
     
+    // MARK: - Properties
+    
+    var healthStore: HKHealthStore?
+    var distanceType = HKQuantityTypeIdentifier.distanceCycling
+
+    
     // MARK: - Lifecycle Methods
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        guard let activity = context as? HKWorkoutActivityType else { return }
+        
+        switch activity {
+        case .cycling:
+            distanceType = .distanceCycling
+        case .running:
+            distanceType = .distanceWalkingRunning
+        case .swimming:
+            distanceType = .distanceSwimming
+        default:
+            distanceType = .distanceWheelchair
+        }
+        
+        // Configure the values we want to write
+        let sampleTypes: Set<HKSampleType> = [.workoutType(),
+        HKSampleType.quantityType(forIdentifier: .heartRate)!,
+        HKSampleType.quantityType(forIdentifier: .activeEnergyBurned)!,
+        HKSampleType.quantityType(forIdentifier: .distanceCycling)!,
+        HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+        HKSampleType.quantityType(forIdentifier: .distanceSwimming)!,
+        HKSampleType.quantityType(forIdentifier: .distanceWheelchair)!
+        ]
+        
+        // Create our health store
+        healthStore = HKHealthStore()
+        
+        // User it to request authorization for our types
+        healthStore?.requestAuthorization(toShare: sampleTypes, read: sampleTypes) { success, error in
+            if success {
+                // start workout!
+            }
+        }
     }
 
     override func willActivate() {

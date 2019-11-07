@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        requestHealthKitAccess()
         return true
     }
 
@@ -32,6 +32,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+
+    // MARK: - Custom Methods
+    
+    func applicationShouldRequestHealthAuthorization(_ application: UIApplication) {
+        let healthStore = HKHealthStore()
+        
+        healthStore.handleAuthorizationForExtension { (success, error) in
+            
+        }
+    }
+    
+    func requestHealthKitAccess() {
+        // Configure the values we want to write
+        let sampleTypes: Set<HKSampleType> = [.workoutType(),
+        HKSampleType.quantityType(forIdentifier: .heartRate)!,
+        HKSampleType.quantityType(forIdentifier: .activeEnergyBurned)!,
+        HKSampleType.quantityType(forIdentifier: .distanceCycling)!,
+        HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+        HKSampleType.quantityType(forIdentifier: .distanceSwimming)!,
+        HKSampleType.quantityType(forIdentifier: .distanceWheelchair)!
+        ]
+        
+        // Create our health store
+        let healthStore = HKHealthStore()
+        
+        // User it to request authorization for our types
+        healthStore.requestAuthorization(toShare: sampleTypes, read: sampleTypes) { success, error in
+            if success {
+                // start workout!
+            }
+        }
+    }
 
 }
 
