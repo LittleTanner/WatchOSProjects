@@ -44,6 +44,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func animateTapped() {
         animate(withDuration: 1) {
             switch self.animation {
+            // Attribute Animations
             case 1:
                 self.image.setAlpha(0.5)
             case 2:
@@ -64,6 +65,10 @@ class InterfaceController: WKInterfaceController {
                 self.image.setHorizontalAlignment(.center)
                 self.image.sizeToFitWidth()
                 self.image.sizeToFitHeight()
+            // Image Animations
+            case 7:
+                self.image.setImageNamed("Animation")
+                self.image.startAnimatingWithImages(in: NSRange(location: 0, length: 23), duration: 3, repeatCount: 0)
             default:
                 self.animation = 1
                 self.animateTapped()
