@@ -20,6 +20,7 @@
 		FC4A941E2374A082001C1B3F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4A941D2374A082001C1B3F /* InterfaceController.swift */; };
 		FC4A94202374A082001C1B3F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4A941F2374A082001C1B3F /* ExtensionDelegate.swift */; };
 		FC4A94222374A082001C1B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4A94212374A082001C1B3F /* Assets.xcassets */; };
+		FC4A94322374A2F6001C1B3F /* WorkoutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4A94312374A2F6001C1B3F /* WorkoutInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		FC4A941F2374A082001C1B3F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		FC4A94212374A082001C1B3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC4A94232374A082001C1B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4A94312374A2F6001C1B3F /* WorkoutInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4A941D2374A082001C1B3F /* InterfaceController.swift */,
+				FC4A94312374A2F6001C1B3F /* WorkoutInterfaceController.swift */,
 				FC4A941F2374A082001C1B3F /* ExtensionDelegate.swift */,
 				FC4A94212374A082001C1B3F /* Assets.xcassets */,
 				FC4A94232374A082001C1B3F /* Info.plist */,
@@ -301,6 +304,7 @@
 			files = (
 				FC4A94202374A082001C1B3F /* ExtensionDelegate.swift in Sources */,
 				FC4A941E2374A082001C1B3F /* InterfaceController.swift in Sources */,
+				FC4A94322374A2F6001C1B3F /* WorkoutInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

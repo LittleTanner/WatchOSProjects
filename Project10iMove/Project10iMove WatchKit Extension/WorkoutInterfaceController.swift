@@ -1,5 +1,5 @@
 //
-//  InterfaceController.swift
+//  WorkoutInterfaceController.swift
 //  Project10iMove WatchKit Extension
 //
 //  Created by Kevin Tanner on 11/7/19.
@@ -10,11 +10,15 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class WorkoutInterfaceController: WKInterfaceController {
 
     // MARK: - Outlets
     
-    @IBOutlet weak var activityType: WKInterfacePicker!
+    @IBOutlet weak var quantityLabel: WKInterfaceLabel!
+    @IBOutlet weak var unitLabel: WKInterfaceLabel!
+    @IBOutlet weak var stopButton: WKInterfaceButton!
+    @IBOutlet weak var resumeButton: WKInterfaceButton!
+    @IBOutlet weak var endButton: WKInterfaceButton!
     
     // MARK: - Lifecycle Methods
 
@@ -23,12 +27,12 @@ class InterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
     }
-    
+
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-    
+
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
@@ -36,10 +40,16 @@ class InterfaceController: WKInterfaceController {
     
     // MARK: - Actions
     
-    @IBAction func activityTypeChanged(_ value: Int) {
+    @IBAction func changeDisplayMode() {
     }
     
-    @IBAction func startWorkoutTapped() {
+    @IBAction func stopWorkout() {
+    }
+    
+    @IBAction func resumeWorkout() {
+    }
+    
+    @IBAction func endWorkout() {
     }
     
 
