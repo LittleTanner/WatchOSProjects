@@ -32,6 +32,10 @@
 	</dict>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We need to save your completed workouts</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We read your health data during workouts</string>
 	<key>WKRunsIndependentlyOfCompanionApp</key>
 	<true/>
 </dict>

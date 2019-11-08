@@ -4,6 +4,8 @@
 <dict>
 	<key>NSHealthShareUsageDescription</key>
 	<string>We read your health data during workouts</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We need to save your completed workouts</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -55,8 +57,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>We need to save your completed workouts</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
