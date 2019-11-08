@@ -113,7 +113,8 @@ class WorkoutInterfaceController: WKInterfaceController, HKWorkoutSessionDelegat
         resumeButton.setHidden(false)
         endButton.setHidden(false)
         
-        healthStore?.pause(workoutSession)
+//        healthStore?.pause(workoutSession)
+        workoutSession.pause()
     }
     
     @IBAction func resumeWorkout() {
@@ -122,14 +123,16 @@ class WorkoutInterfaceController: WKInterfaceController, HKWorkoutSessionDelegat
         resumeButton.setHidden(true)
         endButton.setHidden(true)
         
-        healthStore?.resumeWorkoutSession(workoutSession)
+//        healthStore?.resumeWorkoutSession(workoutSession)
+        workoutSession.resume()
     }
     
     @IBAction func endWorkout() {
         guard let workoutSession = workoutSession else { return }
         workoutEndDate = Date()
         
-        healthStore?.end(workoutSession)
+//        healthStore?.end(workoutSession)
+        workoutSession.end()
     }
     
     
@@ -215,14 +218,28 @@ class WorkoutInterfaceController: WKInterfaceController, HKWorkoutSessionDelegat
         config.locationType = .outdoor
         
         // 2: Create a workout session from that
-        if let session = try? HKWorkoutSession(configuration: config) {
+//        if let session = try? HKWorkoutSession(configuration: config) {
+//            workoutSession = session
+//
+//            // 3: Start the workout now
+//            healthStore?.start(session)
+//
+//            // 4: Reset our start date
+//            workoutStartDate = Date()
+//
+//            // 5: register to recieve status updates
+//            session.delegate = self
+//        }
+        guard let healthStore = healthStore else { return }
+        
+        if let session = try? HKWorkoutSession(healthStore: healthStore, configuration: config) {
             workoutSession = session
             
-            // 3: Start the workout now
-            healthStore?.start(session)
-            
-            // 4: Reset our start date
+            // 3: Reset our start date
             workoutStartDate = Date()
+            
+            // 4: Start the workout now
+            session.startActivity(with: workoutStartDate)
             
             // 5: register to recieve status updates
             session.delegate = self
