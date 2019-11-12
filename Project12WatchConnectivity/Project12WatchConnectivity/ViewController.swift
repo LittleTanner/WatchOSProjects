@@ -39,16 +39,37 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     @objc func sendMessageTapped() {
         let session = WCSession.default
+//
+//        if session.activationState == .activated {
+//            let data = ["text": "User info from the phone"]
+//            session.transferUserInfo(data)
+//        }
         
-        if session.activationState == .activated {
-            let data = ["text": "User info from the phone"]
-            session.transferUserInfo(data)
+        if session.isReachable {
+            let data = ["text": "A message from the phone"]
+            session.sendMessage(data, replyHandler: { response in
+                DispatchQueue.main.async {
+                    self.receivedData.text = "Received response: \(response)"
+                }
+            })
         }
+        
         print("Send Message Tapped")
     }
     
     @objc func sendAppContextTapped() {
         
+        let session = WCSession.default
+        
+        if session.activationState == .activated {
+            let data = ["text": "Hello from the phone"]
+            
+            do {
+                try session.updateApplicationContext(data)
+            } catch {
+                print("Alert! Updating app context failed")
+            }
+        }
         print("Send App Context Tapped")
     }
     
@@ -57,6 +78,22 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
     @objc func sendFileTapped() {
+        let session = WCSession.default
+        
+        if session.activationState ==  .activated {
+            // Create a URL for where the file is/will be saved
+            let fm = FileManager.default
+            let sourceURL = getDocumentsDirectory().appendingPathComponent("saved_file")
+            
+            if !fm.fileExists(atPath: sourceURL.path) {
+                // The file doesn't exist - create it now
+                try? "Hello, from a phone file!".write(to: sourceURL, atomically: true, encoding: String.Encoding.utf8)
+            }
+            
+            // The file exists now; send it across the session
+            session.transferFile(sourceURL, metadata: nil)
+        }
+        
         print("Send File Tapped")
     }
 
@@ -81,6 +118,13 @@ class ViewController: UIViewController, WCSessionDelegate {
         
     }
 
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        DispatchQueue.main.async {
+            if let text = userInfo["text"] as? String {
+                self.receivedData.text = text
+            }
+        }
+    }
 
 }
 

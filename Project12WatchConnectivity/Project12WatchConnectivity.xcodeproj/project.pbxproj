@@ -21,6 +21,8 @@
 		FC302A18237B42F6003279A4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC302A17237B42F6003279A4 /* ExtensionDelegate.swift */; };
 		FC302A1A237B42F6003279A4 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC302A19237B42F6003279A4 /* ComplicationController.swift */; };
 		FC302A1C237B42F7003279A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC302A1B237B42F7003279A4 /* Assets.xcassets */; };
+		FC302A2C237B6817003279A4 /* SharedCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC302A2B237B6817003279A4 /* SharedCode.swift */; };
+		FC302A2D237B6817003279A4 /* SharedCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC302A2B237B6817003279A4 /* SharedCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,7 @@
 		FC302A19237B42F6003279A4 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		FC302A1B237B42F7003279A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC302A1D237B42F7003279A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC302A2B237B6817003279A4 /* SharedCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 		FC3029EF237B42F5003279A4 /* Project12WatchConnectivity */ = {
 			isa = PBXGroup;
 			children = (
+				FC302A2B237B6817003279A4 /* SharedCode.swift */,
 				FC3029F0237B42F5003279A4 /* AppDelegate.swift */,
 				FC3029F2237B42F5003279A4 /* SceneDelegate.swift */,
 				FC3029F4237B42F5003279A4 /* ViewController.swift */,
@@ -293,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3029F5237B42F5003279A4 /* ViewController.swift in Sources */,
+				FC302A2C237B6817003279A4 /* SharedCode.swift in Sources */,
 				FC3029F1237B42F5003279A4 /* AppDelegate.swift in Sources */,
 				FC3029F3237B42F5003279A4 /* SceneDelegate.swift in Sources */,
 			);
@@ -303,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC302A18237B42F6003279A4 /* ExtensionDelegate.swift in Sources */,
+				FC302A2D237B6817003279A4 /* SharedCode.swift in Sources */,
 				FC302A16237B42F6003279A4 /* InterfaceController.swift in Sources */,
 				FC302A1A237B42F6003279A4 /* ComplicationController.swift in Sources */,
 			);
@@ -554,6 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C39EPG5VUE;
 				INFOPLIST_FILE = Project12WatchConnectivity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,6 +579,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C39EPG5VUE;
 				INFOPLIST_FILE = Project12WatchConnectivity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
