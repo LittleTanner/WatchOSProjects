@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WCSessionDelegate {
     
     // MARK: - Outlets
 
@@ -25,6 +26,12 @@ class ViewController: UIViewController {
         let appInfo = UIBarButtonItem(title: "Context", style: .plain, target: self, action: #selector(sendAppContextTapped))
         let file = UIBarButtonItem(title: "File", style: .plain, target: self, action: #selector(sendFileTapped))
         navigationItem.leftBarButtonItems = [complication, message, appInfo, file]
+        
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
     }
 
     
@@ -43,6 +50,27 @@ class ViewController: UIViewController {
     }
     
     @objc func sendFileTapped() {
+        
+    }
+
+    
+    // MARK: - Conforming to Delegates
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        DispatchQueue.main.async {
+            if activationState == .activated {
+                if session.isWatchAppInstalled {
+                    self.receivedData.text = "Watch app is installed!"
+                }
+            }
+        }
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
         
     }
 

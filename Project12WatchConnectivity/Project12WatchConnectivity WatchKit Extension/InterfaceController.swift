@@ -8,9 +8,9 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
-
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     // MARK: - Outlets
 
@@ -23,7 +23,11 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
     }
     
     override func willActivate() {
@@ -41,6 +45,13 @@ class InterfaceController: WKInterfaceController {
     @IBAction func sendDataTapped() {
     }
     
+    
+    // MARK: - Conforming to Delegates
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+
 
 
 }
