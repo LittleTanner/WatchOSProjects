@@ -63,6 +63,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         DispatchQueue.main.async {
             if let text = userInfo["text"] as? String {
                 self.receivedData.setText(text)
+            } else if let number = userInfo["number"] as? String {
+                UserDefaults.standard.set(number, forKey: "complication_number")
+                let server = CLKComplicationServer.sharedInstance()
+                guard let complications = server.activeComplications else { return }
+                
+                for complication in complications {
+                    server.reloadTimeline(for: complication)
+                }
             }
         }
     }

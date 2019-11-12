@@ -74,6 +74,22 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
     @objc func sendComplicationTapped() {
+        
+        let session = WCSession.default
+        
+        // Check that we are good to send
+        if session.activationState == .activated && session.isComplicationEnabled {
+            // Pick a random number and wrap it in a dictionary
+            let randomNumber = String(Int.random(in: 0...9))
+            let message = ["number": randomNumber]
+            
+            // Transfer it across using a high-priority send
+            session.transferCurrentComplicationUserInfo(message)
+            
+            // Output how many high-priority sends we have left
+            print("Attempted to send complication data. Remaining transfers: \(session.remainingComplicationUserInfoTransfers)")
+        }
+        
         print("Send Complication Tapped")
     }
     
