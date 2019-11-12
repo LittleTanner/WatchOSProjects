@@ -51,6 +51,15 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }
+    
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        print("Message Receieved")
+        DispatchQueue.main.async {
+            if let text = userInfo["text"] as? String {
+                self.receivedData.setText(text)
+            }
+        }
+    }
 
 
 

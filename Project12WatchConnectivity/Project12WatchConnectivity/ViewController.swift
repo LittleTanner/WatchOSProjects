@@ -38,19 +38,26 @@ class ViewController: UIViewController, WCSessionDelegate {
     // MARK: - Custom Methods
     
     @objc func sendMessageTapped() {
+        let session = WCSession.default
         
+        if session.activationState == .activated {
+            let data = ["text": "User info from the phone"]
+            session.transferUserInfo(data)
+        }
+        print("Send Message Tapped")
     }
     
     @objc func sendAppContextTapped() {
         
+        print("Send App Context Tapped")
     }
     
     @objc func sendComplicationTapped() {
-        
+        print("Send Complication Tapped")
     }
     
     @objc func sendFileTapped() {
-        
+        print("Send File Tapped")
     }
 
     
