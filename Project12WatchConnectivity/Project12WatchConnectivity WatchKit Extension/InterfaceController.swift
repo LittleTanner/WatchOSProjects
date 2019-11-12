@@ -12,6 +12,14 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    // MARK: - Outlets
+
+    @IBOutlet weak var receivedData: WKInterfaceLabel!
+    
+    
+    
+    // MARK: - Lifecycle Methods
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -27,5 +35,12 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func sendDataTapped() {
+    }
+    
+
 
 }
